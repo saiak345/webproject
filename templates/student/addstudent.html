@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{%static 'style/c.css'%}"/>
+    <title>admissions page</title>
+  </head>
+  <body>
+    <h2>welcome {{name}}, fill the admission form</h2>
+    <form method="POST">
+    <table>
+      {{form.as_table}}
+    </table>
+      <br/>
+      <input type='submit' value='add student'>
+      {% csrf_token %}
+    </form>
+
+  </body>
+</html>
