@@ -20,8 +20,8 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home</a>
       </li>
-      <li >
-        <a href='/college/studentcell'>Student Corner</a>
+      <li class="nav-item active">
+        <a class="nav-link" href='/college/studentcell'>Student Corner</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#">Faculty Corner</a>
@@ -50,7 +50,7 @@
   <p><a href="{% url 'logout' %}">Log Out</a></p>
 {% else %}
   <p>You are not logged in, Please sign in</p>
-  <a href="{% url 'login' %}">Log In</a>
+  <!--<a href="{% url 'login' %}">Log In</a>-->
 {% endif %}
 
 {% endblock %}
