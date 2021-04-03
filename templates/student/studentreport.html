@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>Movie REST</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>admission report</title>
   </head>
   <body>
     <h2>hello {{name}}, Admission report<a href='/accounts/logout'>Logout</a> </h2>
     <br/>
-    <table border='1'>
+    <table class="table table-striped table-dark" border='1'>
       <tr>
         <th>id</th>
         <th>name</th>
@@ -25,8 +27,8 @@
         <td>{{s.fname}}</td>
         <td>{{s.classname}}</td>
         <td>{{s.contact}}</td>
-        <td><a href='/ad/delete/{{s.id}}'>delete</a>
-        <td><a href='/ad/update/{{s.id}}'>update</a></td>
+        <td><a href='/college/delete/{{s.id}}'>delete</a>
+        <td><a href='/college/update/{{s.id}}'>update</a></td>
       </tr>
 
       {% endfor %}

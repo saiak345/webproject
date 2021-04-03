@@ -52,6 +52,27 @@ def stdreport(request):
 
     return render(request,'student/studentreport.html',students)
 
+@login_required
+@permission_required('college.delete_student')
+def deletestudent(request,id):
+    s=student.objects.get(id=id)
+    s.delete()
+    return studentcell(request)
+
+@login_required
+@permission_required('college.change_student')
+def updatestudent(request,id):
+    s=student.objects.get(id=id)
+    form=studentmodelform(instance=s)
+    dict={'form':form}
+
+    if request.method=='POST':
+        form=studentmodelform(request.POST,instance=s)
+        if form.is_valid():
+            form.save()
+        return studentcell(request)
+    return render(request,'student/updated.html',dict)
+
 
 
 
