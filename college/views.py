@@ -11,12 +11,13 @@ from django.urls import reverse_lazy
 from django.views import generic
 
 
-def logoutuser(request):
-    print('sucessfully logged out')
+def logout(request):
+
     return homepage(request)
 
 
 def login(request):
+    
     return render(request,'registration/login.html')
 
 def homepage(request):

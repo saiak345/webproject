@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls import include
-from college.views import homepage
+from college.views import homepage,logout
 from college import views
 
 urlpatterns = [
@@ -26,7 +26,7 @@ urlpatterns = [
 
     path('accounts/',include('django.contrib.auth.urls')),
 
-    path('userlogout/',views.logoutuser),
+    path('userlogout/',logout),
     path('userlogin/',views.login),
 
 ]
